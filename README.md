@@ -17,4 +17,4 @@ The ER diagram is as shown below:
 
 Normalization (1NF, 2NF, 3NF, BCNF) was performed on the dataset to increase data integrity and remove data redundancy if any from the tables.
 
-Executed queries to find Total sales of liquor of a single category for all the stores in descending order, Black Friday sales for individual year, Yearly liquor revenue for Iowa state, etc. performing aggregate functions, joins, query optimization, triggers, typecasts, clauses, et. al.
+Executed queries to find Total sales of liquor of a single category for all the stores in descending order, Black Friday sales for individual year, yearly liquor revenue for Iowa state, etc. performing aggregate functions, joins, query optimization, triggers, typecasts, clauses, et. al.

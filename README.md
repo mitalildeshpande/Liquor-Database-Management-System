@@ -11,3 +11,6 @@ All 8 tables have either a primary key or foreign key or both present in it.
 Tables are created using Postgre sql UI and while creating, declared the primary key of the table and the datatypes for all the attributes.
 
 Created individual csv for each table and loaded them to postgre with the help of its UI to import data. After, the data was imported declared the foreign keys for each table as per the ER diagram.
+
+
+![image](https://user-images.githubusercontent.com/51898794/219795742-a90b5b55-50ef-412a-8dde-4b2485265bf6.png)

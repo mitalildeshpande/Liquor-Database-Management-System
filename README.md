@@ -1,20 +1,48 @@
-# Liquor-Database-Management-System
+# Liquor Database Management System
 
-The goal of this project is to help retailers with inventory management. 
-Efficient inventory management helps to reduce costs, enhance cash flow, ensure continuous supply as well as fulfillment of customer needs and demands.
-Created an inventory management system which helps to track the in-demand products, manage warehouse space to reduce costs, enhance cash flow, ensure continuous supply as well as fulfillment of customer needs and demands.
+A relational database system for **liquor inventory and sales tracking** across Iowa state retail stores — built on PostgreSQL with a fully normalized 8-table schema, complex joins, and analytical queries.
 
-The dataset used contains information on the name, type, price, quantity and location of sales of individual containers or packages of containers of liquor sold in different counties of Iowa state.
+## Problem Statement
 
-There are a total of 8 tables in the schema.
-All 8 tables have either a primary key or foreign key or both present in it.
-Tables are created using Postgre sql UI and while creating, declared the primary key of the table and the datatypes for all the attributes.
+Retailers struggle with overstocking, stockouts, and poor demand visibility. This system provides a structured, queryable database to track in-demand products, manage warehouse space, and fulfill customer demand efficiently.
 
-Created individual csv for each table and loaded them to postgre with the help of its UI to import data. After, the data was imported declared the foreign keys for each table as per the ER diagram.
+## Dataset
 
-The ER diagram is as shown below:
-![image](https://user-images.githubusercontent.com/51898794/219795742-a90b5b55-50ef-412a-8dde-4b2485265bf6.png)
+- **Source:** Iowa state liquor sales records
+- **Contents:** Product name, type, price, quantity, store location, county-level sales data
+- **Scope:** Individual containers and packages sold across multiple Iowa counties
 
-Normalization (1NF, 2NF, 3NF, BCNF) was performed on the dataset to increase data integrity and remove data redundancy if any from the tables.
+## Schema Design
 
-Executed queries to find Total sales of liquor of a single category for all the stores in descending order, Black Friday sales for individual year, yearly liquor revenue for Iowa state, etc. performing aggregate functions, joins, query optimization, triggers, typecasts, clauses, et. al.
+8 tables with primary keys, foreign keys, and referential integrity:
+
+```
+Stores --< Sales >-- Products
+              |
+           Categories
+              |
+         Vendors / Suppliers
+```
+
+- Fully normalized (3NF)
+- Primary and foreign key constraints on all tables
+- Designed and built using **PostgreSQL**
+
+## Key Queries
+
+- Top-selling products by county and season
+- Inventory turnover rate per store
+- Revenue by product category
+- Supplier performance analysis
+
+## Tech Stack
+
+`PostgreSQL` · `SQL` · `Relational Database Design` · `ERD Modeling`
+
+## Setup
+
+```bash
+git clone https://github.com/mitalildeshpande/Liquor-Database-Management-System.git
+psql -U postgres -f schema.sql
+psql -U postgres -f data.sql
+```
